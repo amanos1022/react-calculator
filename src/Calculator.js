@@ -81,7 +81,8 @@ class Calculator extends React.Component{
 				if(this.nextOperation == null){
 					this.addEquation(display, null);
 				}else{
-					this.addEquation(display, operation);
+					this.equate();
+					// this.addEquation(display, operation);
 				}
 			}
 
