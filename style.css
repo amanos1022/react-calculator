@@ -2,7 +2,7 @@ div{
 	box-sizing: border-box;
 }
 .calculator{
-	width:250px;
+	width:100%;
 	border:1px solid black;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cacbce+0,e0e0e0+33,e0e0e0+33,abacb2+34,abacb2+34,606870+100 */
 	background: #cacbce; /* Old browsers */
@@ -12,6 +12,10 @@ div{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacbce', endColorstr='#606870',GradientType=0 ); /* IE6-9 */
 	border-radius:5px;
 	padding:.75%;
+	user-select:none;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
 }
 .calculator .calculator__display{
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#565656+0,8e8e8e+16,6b6a6a+68,6d6d6d+72,444444+73,444444+73,252628+100 */
@@ -130,6 +134,25 @@ div{
 }
 .calculator .operators button.plus-btn{
 	height:70px;
+}
+.drag-window{
+	position: absolute;
+	top:0;
+	left:0;
+	user-select:none;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	background:#999;
+	width:200px;
+	box-shadow:10px 10px 30px rgba(0,0,0,0.3);
+}
+.drag-window .bar{
+	width:100%;
+	height:20px;
+	background:blue;
+	color:#fff;
+	cursor:move;
 }
 button{
 	display:block;
