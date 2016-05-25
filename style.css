@@ -16,6 +16,7 @@ div{
 	-webkit-user-select: none; /* Chrome/Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+ */
+	font-size:16px;
 }
 .calculator .calculator__display{
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#565656+0,8e8e8e+16,6b6a6a+68,6d6d6d+72,444444+73,444444+73,252628+100 */
@@ -79,15 +80,16 @@ div{
 	color:#fff;
 	font-weight:bold;
 	padding:15% 0;
+	font-size:1.5em;
 }
 .calculator .numbers .button-container button:active{
 	color:rgba(250,250,250,0.3);
 	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.8);
 }
 .calculator .numbers .button-container.zero-btn{
-	margin:0 auto;
 	clear:both;
-	float:none;
+	float:left;
+	clear:left;
 	margin-bottom:2px;
 }
 .calculator .numbers .equals-btn, .calculator .numbers .clear-btn{
@@ -104,13 +106,6 @@ div{
 	border-radius:3px;
 	padding:3%;
 	float:left;
-}
-.calculator .numbers .equals-btn{
-	width:76%;
-}
-.calculator .numbers .clear-btn{
-	width:22%;
-	margin-left:2%;
 }
 .calculator .operators{
 	width:20%;
@@ -131,9 +126,19 @@ div{
 	box-shadow: 0 0 0 1px rgba(0,0,0,0.8), inset 0 0 0 3px rgba(250,250,250,0.2), 1px 1px 1px rgba(250,250,250, 0.5), -1px -1px 1px rgba(0,0,0, 0.5);
 	box-shadow:;
 	margin-bottom:3px;
+	padding:5% 0;
 }
 .calculator .operators button.plus-btn{
 	height:70px;
+}
+.calculator .numbers .button-container button.equals-btn{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
+	background: #bfd255; /* Old browsers */
+	background: -moz-linear-gradient(top,  #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+
 }
 .drag-window{
 	position: absolute;
@@ -144,7 +149,7 @@ div{
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+ */
 	background:#999;
-	width:200px;
+	width:300px;
 	box-shadow:10px 10px 30px rgba(0,0,0,0.3);
 }
 .drag-window .bar{
@@ -153,6 +158,22 @@ div{
 	background:blue;
 	color:#fff;
 	cursor:move;
+	position:relative;
+}
+.drag-window .bar .close-btn{
+	width:10%;
+	height:100%;
+	border:1px solid #fff;
+	box-sizing: border-box;
+	position: absolute;
+	right:0;
+	top:0%;
+	text-align:center;
+	cursor:pointer;
+}
+.drag-window .bar .close-btn:hover{
+	color:blue;
+	background:#fff;
 }
 button{
 	display:block;

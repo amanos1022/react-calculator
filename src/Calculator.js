@@ -65,7 +65,7 @@ class Calculator extends React.Component{
 		console.log(this.equationStack);
 	}
 	addEquation(value, operation){
-		this.equationStack.push({value:parseInt(value), operation:operation});
+		this.equationStack.push({value:parseFloat(value), operation:operation});
 	}
 	clear(){
 		this.setState({display:'0'});
@@ -103,26 +103,29 @@ class Calculator extends React.Component{
 
 				<div className="numbers">
 					<div className="numbers-container">
-						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} label="label" value={1} />
-						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} label="label" value={2} />
-						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} label="label" value={3} />
-						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} label="label" value={4} />
-						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} label="label" value={5} />
-						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} label="label" value={6} />
-						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} label="label" value={7} />
-						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} label="label" value={8} />
-						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} label="label" value={9} />
-						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} className="zero-btn" label="label" value={0} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} value={1} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} value={2} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} value={3} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} value={4} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} value={5} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} value={6} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} value={7} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} value={8} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} value={9} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} className="zero-btn" value={0} />
+						<CalculatorNumberButton  onClickButton={this.buttonClick.bind(this)} value="." />
+						<div className="button-container">
+							<button className="equals-btn" onClick={this.equate.bind(this)}>=</button>
+						</div>
 					</div>
 
 					<div className="operators">
+						<button className="clear-btn" onClick={this.clear.bind(this)}>C</button>
 						<OperatorButton addEquation={this.operatorClick.bind(this)} display={this.state.display} operation="/" />
 						<OperatorButton addEquation={this.operatorClick.bind(this)} display={this.state.display} operation="x" />
 						<OperatorButton addEquation={this.operatorClick.bind(this)} display={this.state.display} operation="-" />
 						<OperatorButton className="plus-btn" addEquation={this.operatorClick.bind(this)} display={this.state.display} operation="+" />
 					</div>
-					<button className="equals-btn" onClick={this.equate.bind(this)}>=</button>
-					<button className="clear-btn" onClick={this.clear.bind(this)}>C</button>
 				</div>
 				<div className="clear"></div>
 			</div>

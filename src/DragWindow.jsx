@@ -5,12 +5,6 @@ class DragWindow extends React.Component{
 	constructor(props){
 		super(props);
 		this.state = {top:0, left:0};
-		this.content = ''; 
-		if(typeof(props.module) !='undefined'){
-			this.content = props.module.render();
-		}else{
-			this.content = props.content || '';
-		}
 	}
 	drag(e){
 		this.setState({top:e.pageY, left:e.pageX});
@@ -38,11 +32,17 @@ class DragWindow extends React.Component{
 			}
 		})
 	}
+	close(e){
+		console.log(e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode));
+	}
 	render(){
 		return (
 			<div className="drag-window" style={this.state}>
-				<div className="bar" onMouseDown={(e) => this.startDrag(e)}>{this.props.title}</div>
-				{this.content}
+				<div className="bar" onMouseDown={(e) => this.startDrag(e)}>
+					{this.props.title}
+					<div className="close-btn" onClick={(e) => this.close(e)}>x</div>
+				</div>
+				{this.props.children}
 			</div>
 		);
 	}

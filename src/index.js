@@ -6,13 +6,10 @@ import DragWindow from './DragWindow';
 ReactDOM.render(
 	(
 		<div>
-			<DragWindow
-				title="Calculator"
-				module={new Calculator({className:"calculator"})} />
-			<DragWindow
-				title="Another window" 
-				content={<strong>Hey</strong>} />
 			<Calculator className="calculator" />
+			<DragWindow title="Calculator">
+				<Calculator className="calculator" />
+			</DragWindow>
 		</div>
 	), 
 	document.getElementById('container')
