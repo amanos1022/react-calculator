@@ -1,0 +1,140 @@
+div{
+	box-sizing: border-box;
+}
+.calculator{
+	width:250px;
+	border:1px solid black;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cacbce+0,e0e0e0+33,e0e0e0+33,abacb2+34,abacb2+34,606870+100 */
+	background: #cacbce; /* Old browsers */
+	background: -moz-linear-gradient(top,#cacbce 0%, #e0e0e0 33%, #e0e0e0 33%, #abacb2 34%, #abacb2 34%, #606870 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,#cacbce 0%,#e0e0e0 33%,#e0e0e0 33%,#abacb2 34%,#abacb2 34%,#606870 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,#cacbce 0%,#e0e0e0 33%,#e0e0e0 33%,#abacb2 34%,#abacb2 34%,#606870 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacbce', endColorstr='#606870',GradientType=0 ); /* IE6-9 */
+	border-radius:5px;
+	padding:.75%;
+}
+.calculator .calculator__display{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#565656+0,8e8e8e+16,6b6a6a+68,6d6d6d+72,444444+73,444444+73,252628+100 */
+	background: #565656; /* Old browsers */
+	background: -moz-linear-gradient(top,#565656 0%, #8e8e8e 16%, #6b6a6a 68%, #6d6d6d 72%, #444444 73%, #444444 73%, #252628 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,#565656 0%,#8e8e8e 16%,#6b6a6a 68%,#6d6d6d 72%,#444444 73%,#444444 73%,#252628 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,#565656 0%,#8e8e8e 16%,#6b6a6a 68%,#6d6d6d 72%,#444444 73%,#444444 73%,#252628 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#565656', endColorstr='#252628',GradientType=0 ); /* IE6-9 */
+	color:#fff;
+	border-radius: 3px;
+	width:100%;
+	display:block;
+	border:1px solid #000;
+	margin-bottom:10px;
+	padding:0 2%;
+	font-size:1.3em;
+	font-weight:bold;
+	text-align: right;
+}
+.calculator .calculator__display .operator{
+	float:left;
+	font-weight:normal;
+	color:#93c3f8;
+	text-shadow: 0 0 3px #3c92f3;
+	font-size:.8em;
+}
+.calculator .numbers{
+	width:100%;
+	float:left;
+	padding:2%;
+	box-sizing: border-box;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f3f3f+2,474747+100 */
+	background: #3f3f3f; /* Old browsers */
+	background: -moz-linear-gradient(top,#3f3f3f 2%, #474747 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,#3f3f3f 2%,#474747 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,#3f3f3f 2%,#474747 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f3f3f', endColorstr='#474747',GradientType=0 ); /* IE6-9 */
+	border-radius: 3px;
+}
+.calculator .numbers .numbers-container{
+	width:80%;
+	float:left;
+}
+.calculator .numbers .button-container{
+	width:33%;
+	float:left;
+	box-sizing: border-box;
+	padding:1%;
+
+}
+.calculator .numbers .button-container button{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a0a0a0+2,8e8e8e+24,757575+100 */
+	background: #a0a0a0; /* Old browsers */
+	background: -moz-linear-gradient(top,#a0a0a0 2%, #8e8e8e 24%, #757575 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,#a0a0a0 2%,#8e8e8e 24%,#757575 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,#a0a0a0 2%,#8e8e8e 24%,#757575 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0a0a0', endColorstr='#757575',GradientType=0 ); /* IE6-9 */
+	border-radius:3px;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.8), inset 0 0 0 3px rgba(250,250,250,0.3), 1px 1px 1px rgba(250,250,250, 0.5), -1px -1px 1px rgba(0,0,0, 0.5);
+	border: none;
+	color:#fff;
+	font-weight:bold;
+	padding:15% 0;
+}
+.calculator .numbers .button-container button:active{
+	color:rgba(250,250,250,0.3);
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.8);
+}
+.calculator .numbers .button-container.zero-btn{
+	margin:0 auto;
+	clear:both;
+	float:none;
+	margin-bottom:2px;
+}
+.calculator .numbers .equals-btn, .calculator .numbers .clear-btn{
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.8),inset 0 2px 10px rgba(250,250,250, 0.5), inset 0 -2px 10px #561300, inset 0 0 0 3px #ae2700, 1px 1px 1px rgba(250,250,250, 0.5), -1px -1px 1px rgba(0,0,0, 0.5);
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#611600+0,611600+100 */
+	background: #611600; /* Old browsers */
+	background: -moz-linear-gradient(top,#611600 0%, #611600 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,#611600 0%,#611600 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,#611600 0%,#611600 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#611600', endColorstr='#611600',GradientType=0 ); /* IE6-9 */
+	color:#e87e2e;
+	font-weight: bold;
+	border:none;
+	border-radius:3px;
+	padding:3%;
+	float:left;
+}
+.calculator .numbers .equals-btn{
+	width:76%;
+}
+.calculator .numbers .clear-btn{
+	width:22%;
+	margin-left:2%;
+}
+.calculator .operators{
+	width:20%;
+	float:left;
+	padding-left:1%;
+}
+.calculator .operators button{
+	width:100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3d4e61+0,1e2a37+100 */
+	background: #3d4e61; /* Old browsers */
+	background: -moz-linear-gradient(top,#3d4e61 0%, #1e2a37 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,#3d4e61 0%,#1e2a37 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,#3d4e61 0%,#1e2a37 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d4e61', endColorstr='#1e2a37',GradientType=0 ); /* IE6-9 */
+	color:#a6bace;
+	border:none;
+	border-radius:3px;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.8), inset 0 0 0 3px rgba(250,250,250,0.2), 1px 1px 1px rgba(250,250,250, 0.5), -1px -1px 1px rgba(0,0,0, 0.5);
+	box-shadow:;
+	margin-bottom:3px;
+}
+.calculator .operators button.plus-btn{
+	height:70px;
+}
+button{
+	display:block;
+	width:100%;
+}
+.clear{
+	clear:both;
+}
